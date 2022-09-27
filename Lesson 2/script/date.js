@@ -1,10 +1,9 @@
-/*Last date modified code*/
-const lastmodified = document.querySelector("#lastmodified");
-lastmodified.innerHTML = `Last Updated: ${document.lastModified}
-//Get year code
-const p_year = document.querySelector("#Chinemerem");
-const today = new Date();
-const year = today.getFullYear();
-p_year.innerHTML = ` & copy;
-`${year}`
-`Ukeje Chinemerem`;
+const options = {
+    weekday: "long",
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+  };
+  document.getElementById("currentdate").textContent =
+    new Date().toLocaleDateString("en-US", options);
+  const todaysdate = new Date();

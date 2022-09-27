@@ -14,32 +14,38 @@
 </head>
 
 <body>
-    <header>
+    <header class="header-grid">
         <h1>Design Principles Document</h1>
-        <h1 id="name"> Ukeje Chinemerem</h1>
+        <h2> Ukeje Chinemerem</h2>
     </header>
 
     <main>
-        <section>
-           <h2>Contrast</h2> 
+        <div class="principle-grid">
+            <h3>White Space</h3>
+         <div class="principle-main">
+            
            <h3><a href="GitHub.com">GitHub.com</a></h3>
            <img src="images/Github.jpeg" alt="This demostras repitition">
            <p>The choice of colors for the GitHub website is what attracted me to the website. While featuring a dark image as the backgorund, the other elements on the page are depicted with lighter and beautiful color. This in turn
             gives the website a very cool yet professional contrast. Making it easy for users to be attracted to it and even want to explore the website
 </p>
-        </section>
+        </div>
+        </div>
 
-        <section>
-            <h2>Proximity</h2> 
+        <div class="principle-grid">
+            <h3>Contasts</h3>
+        <div class="principle-main">
             <h3><a href="Coursera.org">Coursera.org</a></h3>
             <img src="images/Coursera.jpeg" alt="This demostras repitition">
             <p>The Coursera website is a perfect example of a website that practices good proximity. The elements on the websites are placed equally around each other with adequate distance around each of the elements. Also, there is enough
                 spacing around each and sections of the website giving the overall website a wonderful and professional appearance. This look makes it easy for any user to easily interact with the website.
 </p>
-         </section>
+        </div>
+        </div> 
 
-         <section>
-            <h2>alignment</h2> 
+        <div class="principle-grid fitts-grid">
+            <h3>Fitt's Law</h3>
+            <div class="principle-main"></div>
             <h3><a href="churchofjeuschrist.org">churchofjeuschrist.org</a></h3>
             <img src="images/LDS.jpeg" alt="This demostras repitition">
             <p>The Church of Jesus Christ website is another website that practices good alignment. Each elements on the website are well positioned relative to the entire website. I also observed that each elements on the website are well padded
@@ -47,16 +53,12 @@
          </section>
     </main>
 
-    <footer>
-        <p id="Ukeje">&copy; 2022 | Ukeje Chinemerem | Last Updated </p>
-        <p id="demo"></p>
-
-        <script>
-            const d = new Date();
-            document.getElementById("demo").innerHTML = d;
-        </script>
+    <footer class="footer-grid">
+        <!-- JS! -->
+        &copy; 2022 .:|:. Ukeje Chinemerem .:|:. Nigeria
+    <p>Last Updated: <span id="currentdate"></span></p>
     </footer>
-
+    <script src="script/date.js"></script> 
 </body>
 
 </html>
