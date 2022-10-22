@@ -27,6 +27,7 @@ h2 {
   color: #FFB30F;
   background-color: #042b423d;
   grid-column: 1/4;
+  text-align: center;
 }
 .header-grid {
   display: grid;
