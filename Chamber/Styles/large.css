@@ -175,63 +175,44 @@
 
     /* DISCOVER PAGE */
     
-    #discovermain {
-        margin: 0 auto;
-        max-width: 1080px;
-      }
-      .top {
-        padding: 30px 90px 10px 90px;
-      }
-      .top h2,
-      .top p {
-        font-size: 1.7rem;
-      }
-      #gallery {
-        margin: 0 auto;
+
+    #gallery .photo:hover{
+        padding-left: 2rem;
+        box-shadow: 0px 0px 10px #010d14;
+    }
+    #gallery .photo{
         grid-template-columns: 1fr 1fr;
-        max-width: 1080px;
-        margin-bottom: 30px;
-        grid-gap: 1px;
-      }
-      #gallery div.blue {
-        padding: 65px 30px 0 30px;
-      }
-      #gallery div.light-blue {
-        padding: 65px 30px 0 30px;
-      }
-      #gallery p {
-        color: white;
-        text-align: center;
-        font-size: 1.5rem;
-      }
-      #gallery :nth-child(3) {
+    }
+    #gallery .photo .right-img{
         grid-column: 2/3;
-      }
-      #gallery :nth-child(4) {
+        grid-row:1/2;
+    }
+    main #gallery{
+        max-width: 80vw; 
+    }
+
+    #gallery .photo .left-text{
+        padding: 10px;
         grid-column: 1/2;
-        grid-row: 2;
-      }
-      #gallery :nth-child(7) {
-        grid-column: 2/3;
-      }
-      #gallery :nth-child(8) {
-        grid-column: 1/2;
-        grid-row: 4;
-      }
-      #gallery :nth-child(11) {
-        grid-column: 2/3;
-      }
-      #gallery :nth-child(12) {
-        grid-column: 1/2;
-        grid-row: 6;
-      }
-      #gallery :nth-child(15) {
-        grid-column: 2/3;
-      }
-      #gallery :nth-child(16) {
-        grid-column: 1/2;
-        grid-row: 8;
-      }
+        grid-row:1/2;
+    }
+    #gallery .photo .info{
+        padding: 2rem;
+    }
+    /* ////////////////////////////
+     /* Join page */
+     form{
+         width: 30rem;
+     }
+     .main-join-area{
+        max-width: 50rem;
+     }
+     fieldset{
+         width: 28rem;
+     }
+     #description{
+         width: 29.8rem;
+     }
     /* ////////////////////////////
      /* Join page */
      form{
