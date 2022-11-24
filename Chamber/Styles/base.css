@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,300&display=swap');
 body {
   margin: 0px;
   padding: 0px;
@@ -24,26 +23,26 @@ h2 {
   display: none;
 }
 .banner{
-    color: #FFB30F;
-    background-color: #042b423d;
-    grid-column: 1/4;
-    display: flex;
+  color: #FFB30F;
+  background-color: #042b423d;
+  grid-column: 1/4;
+  display: flex;
 }
 .banner #hex{
-    margin-left: auto;
-    padding: 20px;
-    
+  margin-left: auto;
+  padding: 20px;
+  
 }
 .header-grid {
-    display: grid;
-    grid-template-columns: 60% 1fr 1fr;
-    grid-template-rows: 1fr min-content;
-    background-color: #132c46;
-    color: whitesmoke;
-    height: min-content;
-    font-family: 'Inconsolata', monospace;
-    padding: .8rem;
-    padding-bottom: 1rem;
+  display: grid;
+  grid-template-columns: 60% 1fr 1fr;
+  grid-template-rows: 1fr min-content;
+  background-color: #132c46;
+  color: whitesmoke;
+  height: min-content;
+  font-family: 'Inconsolata', monospace;
+  padding: .8rem;
+  padding-bottom: 1rem;
 }
 
 .logo-img {
@@ -136,7 +135,7 @@ main div#hero{padding: 0px;}
 .hero h2,
 .sub h3 {
   font-size: 2rem;
-  color: whitesmoke;
+  color: white;
 }
 .hero h2{
   grid-column: 1/3;
@@ -151,18 +150,21 @@ main div#hero{padding: 0px;}
 }
 
 .hero h2 span,
-.sub h2 {
-  color: #FFB30F;
+.sub h2, .spotlight {
+  color: #ffbb29;
 }
-
-.hero button#join-btn{
+.numbers span{
+  color: orange;
+  font-weight: 1000;
+}
+.hero #join-btn{
   text-align: center;
   display: grid;
   align-items: center;
   font-weight: bolder;
   font-size: larger;
   font-family: 'Abel', monospace;
-  background-color: #141516;
+  background-color: #132c46;
   margin: 1rem;
   color: #088dda;
   box-shadow: 0px 0px 5px black;
@@ -243,7 +245,6 @@ button :nth-child(2) {
 .block {
   color: gray;
   height: 15rem;
-  /* width: 85%; */
   margin: 10px;
   padding: 1rem;
   font-family: 'Abel', sans-serif;
@@ -251,7 +252,6 @@ button :nth-child(2) {
 }
 
 .placeholder-spotlights {
-
   background: #042b42;
   color: gray;
   height: fit-content;
@@ -267,13 +267,15 @@ button :nth-child(2) {
 .spotlight {
   display: grid;
       justify-items: center;
-      background: rgb(214, 238, 245);
+      background: whitesmoke;
       color: #010d14;
       width: auto;
       height: fit-content;
       padding-bottom: 1rem;
 }
-
+.spotlight img{
+  height: 50px;
+}
 .join {
   display: none;
 }
@@ -296,6 +298,8 @@ footer {
 }
 
 .second-half {
+  display: flex;
+  flex-direction: column;
   font-family: 'Inconsolata', monospace;
 }
 
@@ -305,12 +309,27 @@ footer {
 
 hr {
   width: 90%;
+  border: 1px solid #fab727;
+  background-color: #fab727;
+}
+footer hr{
+  border: 1px solid #2782fa;
+  background-color: #2782fa;
+}
+.banner #hex:hover{
+  background-color: #0101034b;
+  font-weight: bolder;
 }
 
-.hero button#join-btn:hover {
+.hero #join-btn:hover {
   transition: all 0.2s;
-  color: #FFB30F;
-  background-color: black;
+  color: #010d14;
+  background-color: #ce910f;
+  font-weight: bolder;
+  height: 3rem;
+}
+.hero #join-btn:active{
+  padding: 0.7px;
 }
 
 .event:hover {
@@ -328,14 +347,18 @@ button span:hover {
 .last-visit{
   color: #141516;
 }
-
+footer .last-visit{
+  color: whitesmoke;
+}
 .noview{
   opacity: 10%;
-  transform:translateY(20rem);
+  filter: blur(20px);
+  transform:translateY(10rem);
   transition: all 0.5s;
 }   
 .view{
   opacity: 100%;
+  filter: blur(0px);
   transform:translateY(0rem);
 }
 
@@ -444,14 +467,49 @@ label{
   background-color: #010d14;
 }
 /* Directory Page */
+
+
+.switch-box{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 7rem;
+  margin: 0 auto;
+  padding: 2px;
+  margin-bottom: 10px;
+}
+.switch-box img.active-switch{
+  background-color: #7e869175;
+  border-radius: 7px;
+}
+.switch-box img:hover{
+  background-color: #45494e1a;
+  border-radius: 7px;
+  transition:ease 0.5s;
+}
+
+.list-company{
+  box-shadow: none;
+  border: none;
+  font-size: smaller;
+}
+.list-company.company:nth-child(even){
+  background-color: #1315168e;
+}
+
+.list-info ul li:nth-child(3){
+  display: none;
+}
+.list-company .company-img{
+  display: none;
+}
+
 .company{
+  animation-name: slideup;
+  animation-duration: 0.5s;
   display: grid;
   justify-items: center;
   padding:2.5rem;
   text-align: center;
-}
-main{
-  grid-row: 1/-1;
 }
 .company-img{
   width: 180px;
@@ -464,7 +522,11 @@ main{
   list-style-type: none;
   padding: 0px;
 }
-
+.direct-info{
+  text-align: center;
+  justify-self: center;
+  max-width:70vw;
+}
 .NP {
   filter: invert(42%) sepia(93%) saturate(1352%) hue-rotate(87deg) brightness(70%) contrast(119%);
 }
@@ -477,6 +539,7 @@ main{
 .Bronze {
   filter: invert(42%) sepia(180%) saturate(202%) hue-rotate(0deg) brightness(119%) contrast(119%);
 }
+
 /* Contact Page */
 iframe{
   margin: 0 auto;
